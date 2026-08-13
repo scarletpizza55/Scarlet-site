@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu | Scarlet Deli &amp; Pizza &mdash; Deli, Pizza &amp; Halal Near Rutgers</title>
+<meta name="description" content="Full menu for Scarlet Deli & Pizza in New Brunswick, NJ — breakfast, deli sandwiches, burgers, wraps, pizza, salads, desserts and beverages. Halal, vegetarian and vegan options. Plus Pizza Twist and Taco Twist menus.">
+<link rel="canonical" href="https://scarletdelipizza.com/menu.html">
+<meta property="og:title" content="Menu | Scarlet Deli &amp; Pizza &mdash; Deli, Pizza &amp; Halal Near Rutgers">
+<meta property="og:description" content="Full menu for Scarlet Deli & Pizza in New Brunswick, NJ — breakfast, deli sandwiches, burgers, wraps, pizza, salads, desserts and beverages. Halal, vegetarian and vegan options. Plus Pizza Twist and Taco Twist menus.">
+<meta property="og:type" content="restaurant">
+<meta property="og:url" content="https://scarletdelipizza.com/menu.html">
+<meta name="theme-color" content="#CC0033">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.className += " js";</script>
+
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="utility">
+  <div class="wrap">
+    <span class="status" id="status" data-open="unknown">
+      <span class="dot" aria-hidden="true"></span>
+      <span id="statusText">Open daily &mdash; see hours below</span>
+    </span>
+    <span>51 Paul Robeson Blvd, New Brunswick &mdash; on the Rutgers campus</span>
+    <a href="tel:+17322148800">(732) 214-8800</a>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">S</span>
+      <span class="brand__name">Scarlet Deli &amp; Pizza
+        <span class="brand__sub">New Brunswick, NJ</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="menu.html" aria-current="page">Menu</a>
+        <a href="order.html">Order Online</a>
+        <a href="catering.html">Catering</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <a class="btn header-cta" href="order.html">Order Online</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="menu.html" aria-current="page">Menu</a>
+    <a href="order.html">Order Online</a>
+    <a href="catering.html">Catering</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a class="btn btn--block" href="order.html">Order Online</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero hero--page">
+    <div class="hero__media" style="background-image:url('img/hero-menu.jpg')" aria-hidden="true"></div>
+    <div class="hero__scrim" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="hero__inner">
+        <p class="eyebrow eyebrow--light">Menu</p>
+        <h1 class="h-xl">Breakfast, lunch, dinner and late night</h1>
+        <p class="lede lede--light">The full Scarlet Deli &amp; Pizza menu below. For Indian fusion
+          pizza and fusion tacos, jump to Pizza Twist and Taco Twist.</p>
+        <div class="btn-row">
+          <a class="btn btn--onDark" href="#pizza-twist">Pizza Twist</a>
+          <a class="btn btn--ghostDark" href="#taco-twist">Taco Twist</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="cat-nav" aria-label="Menu categories">
+    <div class="cat-nav__scroll">
+      <a href="#breakfast">Breakfast</a>
+      <a href="#omelets">Omelets &amp; Toasts</a>
+      <a href="#breakfast-drinks">Beverages</a>
+      <a href="#fat-sandwiches">Fat Sandwiches</a>
+      <a href="#wraps">Wraps</a>
+      <a href="#sides">Sides</a>
+      <a href="#burgers">Burgers</a>
+      <a href="#cheesesteaks">Cheesesteaks</a>
+      <a href="#hot-sandwiches">Hot Sandwiches</a>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       SCARLET DELI MENU
+       To edit: open MENU in page_menu.py, change the items, re-run
+       `python3 page_menu.py`. Or edit the generated HTML directly —
+       each item follows the same three-span pattern.
+       ============================================================ -->
+  <section class="section" id="scarlet-menu">
+    <div class="wrap wrap--narrow">
+      <div class="section-head reveal">
+        <p class="eyebrow">Scarlet Deli &amp; Pizza</p>
+        <h2 class="h-lg">The full menu</h2>
+        <p class="lede">Breakfast through late night, made to order at the counter. Prices and
+          availability may change &mdash; the board in store is the final word.</p>
+      </div>
+      <div class="course reveal" id="breakfast">
+        <div class="course__head">
+          <h3 class="h-md">Breakfast Menu</h3>
+          <p class="course__note">Roll / Croissant +$1 &middot; Brown or White Bread</p>
+        </div>
+        <ul class="items">
+          <li>
+            <div class="item-line"><span class="name">2 Eggs</span><span class="rule"></span><span class="price">$4.49</span></div>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">Egg &amp; Cheese</span><span class="rule"></span><span class="price">$5.49</span></div>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">Egg White</span><span class="rule"></span><span class="price">$5.49</span></div>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">Egg White &amp; Cheese</span><span class="rule"></span><span class="price">$6.49</span></div>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">Add Any Meat</span><span class="rule"></span><span class="price">+$2.00</span></div>
+            <p class="item-desc">Bacon &middot; Sausage &middot; Turkey Bacon &middot; Pork Roll</p>
+          </li>
+        </ul>
+      </div>
+      <div class="course reveal" id="omelets">
+        <div class="course__head">
+          <h3 class="h-md">Omelets &amp; Toasts</h3>
+          
+        </div>
+        <ul class="items">
+          <li>
+            <div class="item-line"><span class="name">French Toast Sticks</span><span class="rule"></span><span class="price">$6.99</span></div>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">Plain Omelet</span><span class="rule"></span><span class="price">$5.99</span></div>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">Cheese Omelet</span><span class="rule"></span><span class="price">$6.99</span></div>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Add-ons</span></div>
+            <p class="item-desc">Meat +$2 &middot; Veggies +$1 each &middot; Extra Cheese +$1</p>
+          </li>
+        </ul>
+      </div>
+      <div class="course reveal" id="breakfast-drinks">
+        <div class="course__head">
+          <h3 class="h-md">Breakfast Beverages</h3>
+          
+        </div>
+        <ul class="items">
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Coffee</span></div>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Cappuccino</span></div>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Hot Chocolate</span></div>
+          </li>
+        </ul>
+      </div>
+      <div class="course reveal" id="fat-sandwiches">
+        <div class="course__head">
+          <h3 class="h-md">Fat Sandwiches</h3>
+          <p class="course__note">All $12.99</p>
+        </div>
+        <ul class="items">
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Fat Milky</span></div>
+            <p class="item-desc">Cheesesteak, chicken fingers, mozz sticks, marinara, fries</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Fat Roxy</span></div>
+            <p class="item-desc">Grilled chicken, American cheese, jalapeños, fries, BBQ, lettuce, tomato, onion</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Fat Delhi</span></div>
+            <p class="item-desc">Chicken fingers, jalapeños, mozz sticks, fries, lettuce, tomato, mayo, ketchup</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Fat Force</span></div>
+            <p class="item-desc">Cheesesteak, chicken fingers, mozz sticks, fries, lettuce, tomato, onion, mayo, ketchup</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Fat Fine</span></div>
+            <p class="item-desc">Grilled chicken, mozz sticks, fries, lettuce, tomato, onion, mayo, ketchup</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Fat Veggie</span></div>
+            <p class="item-desc">Veggie patty, American cheese, mozz sticks, fries, lettuce, tomato, onion, mayo, ketchup</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Fat Time</span></div>
+            <p class="item-desc">Cheesesteak, mozzarella sticks, fries, marinara</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Fat Mom</span></div>
+            <p class="item-desc">Cheesesteak, grilled chicken, fries, lettuce, tomato, onion, mayo, ketchup</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Fat Foo</span></div>
+            <p class="item-desc">Cheesesteak, bacon, eggs, fries, lettuce, tomato, onion, mayo, ketchup</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Fat Indian</span></div>
+            <p class="item-desc">Chicken fingers, mozz sticks, fries, hot sauce, white sauce, lettuce, tomato, onion, mayo, ketchup</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Fat Buster</span></div>
+            <p class="item-desc">Grilled chicken, American cheese, fries, lettuce, tomato, onion, mayo, ketchup</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Fat Cat</span></div>
+            <p class="item-desc">Cheeseburger, lettuce, tomato, fries, mayo, ketchup</p>
+          </li>
+        </ul>
+      </div>
+      <div class="course reveal" id="wraps">
+        <div class="course__head">
+          <h3 class="h-md">Deli Wraps</h3>
+          <p class="course__note">All $11.99</p>
+        </div>
+        <ul class="items">
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Grilled Chicken Caesar</span></div>
+            <p class="item-desc">Chicken, Caesar dressing, lettuce, parmesan</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Chipotle Grilled Chicken</span></div>
+            <p class="item-desc">Grilled chicken, shredded cheese, chipotle sauce, lettuce, tomato</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Cheese Wrap</span></div>
+            <p class="item-desc">Lettuce, tomato, onion, cheese</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Buffalo Chicken</span></div>
+            <p class="item-desc">Chicken, lettuce, American cheese, buffalo sauce, ranch</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Veggie Grill</span></div>
+            <p class="item-desc">Veggie patty, green pepper, mushroom, jalapeños, lettuce, tomato, mayo, ketchup</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Cheesesteak Wrap</span></div>
+            <p class="item-desc">Steak, green pepper, onion, mayo, ketchup</p>
+          </li>
+        </ul>
+      </div>
+      <div class="course reveal" id="sides">
+        <div class="course__head">
+          <h3 class="h-md">Sides</h3>
+          
+        </div>
+        <ul class="items">
+          <li>
+            <div class="item-line"><span class="name">Fries</span><span class="rule"></span><span class="price">$5.99</span></div>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">Cheese Fries</span><span class="rule"></span><span class="price">$6.99</span></div>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">Mozzarella Sticks (6 pcs)</span><span class="rule"></span><span class="price">$6.99</span></div>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">Onion Rings</span><span class="rule"></span><span class="price">$5.99</span></div>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">Hashbrown (2 pcs)</span><span class="rule"></span><span class="price">$3.99</span></div>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">Chicken Tenders (2 pcs)</span><span class="rule"></span><span class="price">$6.99</span></div>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">Chicken Tenders (4 pcs)</span><span class="rule"></span><span class="price">$9.99</span></div>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">Chicken Tenders (6 pcs)</span><span class="rule"></span><span class="price">$14.99</span></div>
+          </li>
+        </ul>
+      </div>
+      <div class="course reveal" id="burgers">
+        <div class="course__head">
+          <h3 class="h-md">Burgers</h3>
+          <p class="course__note">Served with Fries</p>
+        </div>
+        <ul class="items">
+          <li>
+            <div class="item-line"><span class="name">Cheeseburger</span><span class="rule"></span><span class="price">$11.99</span></div>
+            <p class="item-desc">Beef patty, American cheese, lettuce, tomato, mayo, ketchup</p>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">Bacon Cheeseburger</span><span class="rule"></span><span class="price">$12.99</span></div>
+            <p class="item-desc">Beef patty, cheese, bacon, lettuce, tomato, mayo, ketchup</p>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">BBQ Burger</span><span class="rule"></span><span class="price">$12.99</span></div>
+            <p class="item-desc">Beef patty, onion rings, BBQ sauce, lettuce, tomato, mayo, cheese</p>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">Double Cheeseburger</span><span class="rule"></span><span class="price">$13.49</span></div>
+            <p class="item-desc">Two patties, cheese, pickles, lettuce, tomato, onion, mayo</p>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">Veggie Patty</span><span class="rule"></span><span class="price">$11.99</span></div>
+            <p class="item-desc">Veggie patty, cheese, house sauce, lettuce, tomato, onion</p>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">Spicy Chicken Burger</span><span class="rule"></span><span class="price">$11.99</span></div>
+            <p class="item-desc">Chicken, chipotle mayo, American cheese, lettuce, tomato, onion</p>
+          </li>
+        </ul>
+      </div>
+      <div class="course reveal" id="cheesesteaks">
+        <div class="course__head">
+          <h3 class="h-md">Cheese Steak</h3>
+          <p class="course__note">All $11.99</p>
+        </div>
+        <ul class="items">
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Cheesesteak</span></div>
+            <p class="item-desc">Beef, peppers, onions, cheese, mayo, ketchup</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Chicken Cheesesteak</span></div>
+            <p class="item-desc">Chicken, peppers, onions, cheese, mayo, ketchup</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Buffalo Chicken Cheesesteak</span></div>
+            <p class="item-desc">Chicken, peppers, onions, cheese, mayo, buffalo sauce</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Paneer Cheesesteak</span></div>
+            <p class="item-desc">Cottage cheese/paneer, cheese, corn, onions, bell peppers, mayo, inhouse special sauce</p>
+          </li>
+        </ul>
+      </div>
+      <div class="course reveal" id="hot-sandwiches">
+        <div class="course__head">
+          <h3 class="h-md">Hot Sandwiches</h3>
+          <p class="course__note">All $11.99</p>
+        </div>
+        <ul class="items">
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Veggie Fusion</span></div>
+            <p class="item-desc">Veggie patty, cheese, lettuce, onion, peppers, mayo</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Chopped Cheese</span></div>
+            <p class="item-desc">Chopped beef, cheese, peppers, onion, sauces</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Grilled Chicken</span></div>
+            <p class="item-desc">Chicken, lettuce, tomato, mayo</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Chicken Cutlet</span></div>
+            <p class="item-desc">Breaded chicken, lettuce, tomato, mayo</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Chicken Parmesan</span></div>
+            <p class="item-desc">Chicken cutlet, marinara sauce, mozzarella, parmesan</p>
+          </li>
+          <li>
+            <div class="item-line item-line--flat"><span class="name">Sausage Peppers &amp; Onions</span></div>
+            <p class="item-desc">Sausage, peppers, onions, marinara</p>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">BLT</span><span class="rule"></span><span class="price">$7.99</span></div>
+            <p class="item-desc">Bacon, lettuce, tomato, mayo</p>
+          </li>
+          <li>
+            <div class="item-line"><span class="name">Spicy Chicken / Chicken Sandwich</span><span class="rule"></span><span class="price">$7.99</span></div>
+            <p class="item-desc">Spicy chicken / chicken patty, mayo, pickles</p>
+          </li>
+        </ul>
+      </div>
+      <p style="font-size:.9rem;color:var(--ink-faint);border-top:1px solid var(--sand-line);padding-top:1.25rem">
+        Please tell us about allergies before you order. We prepare food in a shared kitchen and
+        cannot guarantee any item is free from a given allergen.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PIZZA TWIST — external menu.
+       The button opens the Pizza Twist menu PDF hosted on Google Drive.
+       To publish a new menu, use "Manage versions" on that same Drive file —
+       uploading a NEW file changes the ID and breaks this link.
+       ============================================================ -->
+  <section class="section section--canvas" id="pizza-twist">
+    <div class="wrap">
+      <div class="brandblock reveal">
+        <div class="brandblock__media">
+          <div class="photo" style="background-image:url('img/brand-pizzatwist.jpg')"></div>
+        </div>
+        <div class="brandblock__body">
+          <p class="eyebrow">Also at this location</p>
+          <h3 class="h-lg">Pizza Twist</h3>
+          <p class="lede">Indian fusion and traditional pizza. Tandoori, tikka and masala flavors
+            on hand-tossed crusts, plus every classic you&rsquo;d expect &mdash; made fresh in the
+            same building.</p>
+          <div class="chips">
+            <span class="chip">Indian fusion</span>
+            <span class="chip">Halal options</span>
+            <span class="chip">Vegetarian</span>
+            <span class="chip">Whole pies &amp; slices</span>
+          </div>
+          <a class="btn btn--lg" href="https://drive.google.com/file/d/10CqAmaU-O7twKf2NqyDTJmuTi66ShsgN/view" target="_blank" rel="noopener">View Pizza Twist Menu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-8.5 8.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TACO TWIST — external menu.
+       The button opens the Taco Twist menu PDF hosted on Google Drive.
+       To publish a new menu, use "Manage versions" on that same Drive file —
+       uploading a NEW file changes the ID and breaks this link.
+       ============================================================ -->
+  <section class="section" id="taco-twist">
+    <div class="wrap">
+      <div class="brandblock brandblock--reverse reveal">
+        <div class="brandblock__media">
+          <div class="photo" style="background-image:url('img/brand-tacotwist.jpg')"></div>
+        </div>
+        <div class="brandblock__body">
+          <p class="eyebrow">Also at this location</p>
+          <h3 class="h-lg">Taco Twist</h3>
+          <p class="lede">Fusion tacos, burritos, bowls and Indian-inspired street food. Build it
+            how you want it &mdash; bold spice, fresh toppings, ready fast.</p>
+          <div class="chips">
+            <span class="chip">Fusion tacos</span>
+            <span class="chip">Burritos &amp; bowls</span>
+            <span class="chip">Street food</span>
+            <span class="chip">Vegetarian</span>
+          </div>
+          <a class="btn btn--lg" href="https://drive.google.com/file/d/1I_JquxO1HMZ4mn4zwXRkCTGQikfsjAJo/view" target="_blank" rel="noopener">View Taco Twist Menu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-8.5 8.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-band">
+    <div class="wrap">
+      <h2 class="h-lg">Ready to order?</h2>
+      <p>Pick your restaurant and your delivery platform, or call the counter for pickup.</p>
+      <div class="btn-row">
+        <a class="btn btn--lg btn--onDark" href="order.html">Order Online</a>
+        <a class="btn btn--lg btn--ghostDark" href="tel:+17322148800">Call (732) 214-8800</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">S</span>
+          <span class="brand__name">Scarlet Deli &amp; Pizza
+            <span class="brand__sub">New Brunswick, NJ</span>
+          </span>
+        </a>
+        <p>Multiple food concepts, one convenient Rutgers location. Scarlet Deli &amp; Pizza,
+          Pizza Twist and Taco Twist &mdash; all under one roof.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.63A22 22 0 0 0 14.3 3.5c-2.4 0-4 1.46-4 4.15V9.9H7.6V13h2.7v8z"/></svg></a>
+          <a href="https://maps.google.com/?q=51+Paul+Robeson+Blvd,+New+Brunswick,+NJ+08901" aria-label="Google Business Profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6L12 16.8 6.6 19.6l1.2-6L3.3 9.4l6.1-.8z"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Visit</h4>
+        <p><a href="https://maps.google.com/?q=51+Paul+Robeson+Blvd,+New+Brunswick,+NJ+08901">51 Paul Robeson Blvd<br>New Brunswick, NJ 08901</a></p>
+        <p><a href="tel:+17322148800">(732) 214-8800</a></p>
+        <p><a href="mailto:scarletpizza55@gmail.com">scarletpizza55@gmail.com</a></p>
+      </div>
+
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li>Sun&ndash;Wed &middot; 10am&ndash;11pm</li>
+          <li>Thursday &middot; 10am&ndash;12am</li>
+          <li>Fri&ndash;Sat &middot; 10am&ndash;1am</li>
+        </ul>
+        <h4 style="margin-top:1.5rem">Explore</h4>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html">Order Online</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Find us</h4>
+        <div class="footer-map">
+          <iframe src="https://www.google.com/maps?q=51+Paul+Robeson+Blvd,+New+Brunswick,+NJ+08901&amp;output=embed"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                  title="Map to Scarlet Deli and Pizza"></iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="colophon">
+      <span>&copy; <span id="year">2026</span> Scarlet Deli &amp; Pizza &middot; New Brunswick, New Jersey</span>
+      <span>Restaurants near Rutgers University &middot; Halal &amp; vegetarian options</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
