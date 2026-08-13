@@ -1,0 +1,7 @@
+# Files in the repo that should NOT be published to the live site.
+# Everything else in this folder gets served.
+
+wrangler.jsonc
+.assetsignore
+README.md
+EDITING.md
