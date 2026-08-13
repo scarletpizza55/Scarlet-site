@@ -1,0 +1,31 @@
+{
+  // Cloudflare Workers — static assets only.
+  //
+  // There is deliberately no "main" key here. Without a Worker script,
+  // Cloudflare serves the files directly from its edge network: no build,
+  // no cold start, no CPU billing. This is the correct setup for a plain
+  // HTML site like this one.
+  //
+  // Deploy command in the Cloudflare dashboard: npx wrangler deploy
+  // Build command: leave completely empty.
+
+  "name": "scarlet-site",
+  "compatibility_date": "2026-08-13",
+
+  "assets": {
+    // "./" means the repository root, which is where index.html lives.
+    "directory": "./",
+
+    // Lets /menu resolve to menu.html, so URLs stay tidy. Existing links
+    // ending in .html keep working either way.
+    "html_handling": "auto-trailing-slash",
+
+    // Serves 404.html for any address that doesn't exist, instead of a
+    // bare Cloudflare error page.
+    "not_found_handling": "404-page"
+  },
+
+  "observability": {
+    "enabled": true
+  }
+}
