@@ -23,6 +23,16 @@
 
 <a class="skip" href="#main">Skip to content</a>
 
+<div class="announce" id="announce" hidden>
+  <div class="wrap">
+    <p><strong>Welcome, new Rutgers students!</strong> Free dessert on orders over $30, 20% off pizza 2&ndash;5pm,
+      and 5% off with a Rutgers ID. <a href="offers.html">See the offers</a></p>
+    <button class="announce__close" id="announceClose" aria-label="Dismiss announcement">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+</div>
+
 <div class="utility">
   <div class="wrap">
     <span class="status" id="status" data-open="unknown">
@@ -46,13 +56,14 @@
     <nav class="nav" aria-label="Main">
         <a href="index.html">Home</a>
         <a href="menu.html" aria-current="page">Menu</a>
-        <a href="order.html">Order Online</a>
+        <a href="offers.html">Offers</a>
+        <a href="order.html">Order</a>
         <a href="catering.html">Catering</a>
-        <a href="about.html">About Us</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
     </nav>
 
-    <a class="btn header-cta" href="order.html">Order Online</a>
+    <a class="btn header-cta" href="order.html">Order</a>
 
     <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
       <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -63,11 +74,12 @@
   <div class="mobile-nav" id="mobileNav">
     <a href="index.html">Home</a>
     <a href="menu.html" aria-current="page">Menu</a>
-    <a href="order.html">Order Online</a>
+        <a href="offers.html">Offers</a>
+    <a href="order.html">Order</a>
     <a href="catering.html">Catering</a>
-    <a href="about.html">About Us</a>
+    <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-    <a class="btn btn--block" href="order.html">Order Online</a>
+    <a class="btn btn--block" href="order.html">Order</a>
   </div>
 </header>
 
@@ -79,9 +91,9 @@
     <div class="wrap">
       <div class="hero__inner">
         <p class="eyebrow eyebrow--light">Menu</p>
-        <h1 class="h-xl">Breakfast, lunch, dinner and late night</h1>
-        <p class="lede lede--light">The full Scarlet Deli &amp; Pizza menu below. For Indian fusion
-          pizza and fusion tacos, jump to Pizza Twist and Taco Twist.</p>
+        <h1 class="h-xl">Three menus, one address</h1>
+        <p class="lede lede--light">Scarlet Deli, Pizza Twist and Taco Twist all serve from
+          51 Paul Robeson Blvd. Pick the kitchen you want.</p>
         <div class="btn-row">
           <a class="btn btn--onDark" href="#pizza-twist">Pizza Twist</a>
           <a class="btn btn--ghostDark" href="#taco-twist">Taco Twist</a>
@@ -90,8 +102,52 @@
     </div>
   </section>
 
+
+  <!-- ============================================================
+       MENU CHOOSER — the three kitchens, above everything else.
+       Most people never scroll to the bottom of a menu page, so
+       Pizza Twist and Taco Twist have to be visible immediately.
+       ============================================================ -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="chooser">
+
+        <a class="chooser__card chooser__card--deli" href="#scarlet-menu">
+          <span class="chooser__media" style="background-image:url('img/card-deli.jpg')" aria-hidden="true"></span>
+          <span class="chooser__body">
+            <span class="chooser__kind">Deli &middot; Breakfast &middot; Burgers</span>
+            <span class="chooser__name">Scarlet Deli</span>
+            <span class="chooser__note">Full menu on this page</span>
+          </span>
+        </a>
+
+        <a class="chooser__card chooser__card--pizza" href="https://drive.google.com/file/d/10CqAmaU-O7twKf2NqyDTJmuTi66ShsgN/view" target="_blank" rel="noopener">
+          <span class="chooser__media" style="background-image:url('img/brand-pizzatwist.jpg')" aria-hidden="true"></span>
+          <span class="chooser__body">
+            <span class="chooser__kind">Indian fusion &amp; traditional pizza</span>
+            <span class="chooser__name">Pizza Twist <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-8.5 8.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></span>
+            <span class="chooser__note">Opens the full menu</span>
+          </span>
+        </a>
+
+        <a class="chooser__card chooser__card--taco" href="https://drive.google.com/file/d/1I_JquxO1HMZ4mn4zwXRkCTGQikfsjAJo/view" target="_blank" rel="noopener">
+          <span class="chooser__media" style="background-image:url('img/brand-tacotwist.jpg')" aria-hidden="true"></span>
+          <span class="chooser__body">
+            <span class="chooser__kind">Fusion tacos, burritos &amp; bowls</span>
+            <span class="chooser__name">Taco Twist <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-8.5 8.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></span>
+            <span class="chooser__note">Opens the full menu</span>
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
   <nav class="cat-nav" aria-label="Menu categories">
     <div class="cat-nav__scroll">
+      <a class="cat-nav__brand cat-nav__brand--pizza" href="https://drive.google.com/file/d/10CqAmaU-O7twKf2NqyDTJmuTi66ShsgN/view" target="_blank" rel="noopener">Pizza Twist Menu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-8.5 8.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+      <a class="cat-nav__brand cat-nav__brand--taco" href="https://drive.google.com/file/d/1I_JquxO1HMZ4mn4zwXRkCTGQikfsjAJo/view" target="_blank" rel="noopener">Taco Twist Menu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-8.5 8.5"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+      <span class="cat-nav__sep" aria-hidden="true"></span>
       <a href="#breakfast">Breakfast</a>
       <a href="#omelets">Omelets &amp; Toasts</a>
       <a href="#breakfast-drinks">Beverages</a>
@@ -467,7 +523,7 @@
       <h2 class="h-lg">Ready to order?</h2>
       <p>Pick your restaurant and your delivery platform, or call the counter for pickup.</p>
       <div class="btn-row">
-        <a class="btn btn--lg btn--onDark" href="order.html">Order Online</a>
+        <a class="btn btn--lg btn--onDark" href="order.html">Order</a>
         <a class="btn btn--lg btn--ghostDark" href="tel:+17322148800">Call (732) 214-8800</a>
       </div>
     </div>
@@ -511,8 +567,9 @@
         </ul>
         <h4 style="margin-top:1.5rem">Explore</h4>
         <ul>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="order.html">Order Online</a></li>
+          <li><a href="menu.html">Menu</a>
+        <a href="offers.html">Offers</a></li>
+          <li><a href="order.html">Order</a></li>
           <li><a href="catering.html">Catering</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -531,7 +588,7 @@
 
     <div class="colophon">
       <span>&copy; <span id="year">2026</span> Scarlet Deli &amp; Pizza &middot; New Brunswick, New Jersey</span>
-      <span>Restaurants near Rutgers University &middot; Halal &amp; vegetarian options</span>
+      <span>Restaurants near Rutgers University &middot; Halal menu at Pizza Twist</span>
     </div>
   </div>
 </footer>

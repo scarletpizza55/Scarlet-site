@@ -237,3 +237,39 @@ setInterval(checkOpen, 60000);
     });
   });
 })();
+
+
+/* ============================================================
+   6. Announcement bar
+   Hidden by default in the HTML so it can never flash on screen
+   before this runs. Shown unless the visitor dismissed it, and
+   the dismissal is remembered for 14 days.
+   ============================================================ */
+
+(function () {
+  var bar = document.getElementById('announce');
+  var close = document.getElementById('announceClose');
+  if (!bar) return;
+
+  var KEY = 'sdp-announce-dismissed';
+  var DAYS = 14;
+
+  var dismissed = false;
+  try {
+    var until = window.localStorage.getItem(KEY);
+    dismissed = until && Date.now() < parseInt(until, 10);
+  } catch (e) {
+    // Private browsing can block localStorage. Showing the bar is the safe default.
+  }
+
+  if (!dismissed) bar.hidden = false;
+
+  if (close) {
+    close.addEventListener('click', function () {
+      bar.hidden = true;
+      try {
+        window.localStorage.setItem(KEY, String(Date.now() + DAYS * 864e5));
+      } catch (e) {}
+    });
+  }
+})();

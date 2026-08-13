@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Scarlet Deli &amp; Pizza | Food Near Rutgers University, New Brunswick NJ</title>
-<meta name="description" content="Multi-concept restaurant near Rutgers University in New Brunswick, NJ. Deli sandwiches, burgers, wraps and pizza, plus Pizza Twist Indian fusion pizza and Taco Twist fusion tacos. Halal and vegetarian options. Order online or call ahead.">
+<meta name="description" content="Multi-concept restaurant near Rutgers University in New Brunswick, NJ. Deli sandwiches, burgers, wraps and pizza, plus Pizza Twist Indian fusion pizza and Taco Twist fusion tacos. Halal menu at Pizza Twist. Order online or call ahead.">
 <link rel="canonical" href="https://scarletdelipizza.com/index.html">
 <meta property="og:title" content="Scarlet Deli &amp; Pizza | Food Near Rutgers University, New Brunswick NJ">
-<meta property="og:description" content="Multi-concept restaurant near Rutgers University in New Brunswick, NJ. Deli sandwiches, burgers, wraps and pizza, plus Pizza Twist Indian fusion pizza and Taco Twist fusion tacos. Halal and vegetarian options. Order online or call ahead.">
+<meta property="og:description" content="Multi-concept restaurant near Rutgers University in New Brunswick, NJ. Deli sandwiches, burgers, wraps and pizza, plus Pizza Twist Indian fusion pizza and Taco Twist fusion tacos. Halal menu at Pizza Twist. Order online or call ahead.">
 <meta property="og:type" content="restaurant">
 <meta property="og:url" content="https://scarletdelipizza.com/index.html">
 <meta name="theme-color" content="#CC0033">
@@ -49,6 +49,16 @@
 
 <a class="skip" href="#main">Skip to content</a>
 
+<div class="announce" id="announce" hidden>
+  <div class="wrap">
+    <p><strong>Welcome, new Rutgers students!</strong> Free dessert on orders over $30, 20% off pizza 2&ndash;5pm,
+      and 5% off with a Rutgers ID. <a href="offers.html">See the offers</a></p>
+    <button class="announce__close" id="announceClose" aria-label="Dismiss announcement">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+</div>
+
 <div class="utility">
   <div class="wrap">
     <span class="status" id="status" data-open="unknown">
@@ -72,13 +82,14 @@
     <nav class="nav" aria-label="Main">
         <a href="index.html" aria-current="page">Home</a>
         <a href="menu.html">Menu</a>
-        <a href="order.html">Order Online</a>
+        <a href="offers.html">Offers</a>
+        <a href="order.html">Order</a>
         <a href="catering.html">Catering</a>
-        <a href="about.html">About Us</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
     </nav>
 
-    <a class="btn header-cta" href="order.html">Order Online</a>
+    <a class="btn header-cta" href="order.html">Order</a>
 
     <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
       <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -89,11 +100,12 @@
   <div class="mobile-nav" id="mobileNav">
     <a href="index.html" aria-current="page">Home</a>
     <a href="menu.html">Menu</a>
-    <a href="order.html">Order Online</a>
+        <a href="offers.html">Offers</a>
+    <a href="order.html">Order</a>
     <a href="catering.html">Catering</a>
-    <a href="about.html">About Us</a>
+    <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-    <a class="btn btn--block" href="order.html">Order Online</a>
+    <a class="btn btn--block" href="order.html">Order</a>
   </div>
 </header>
 
@@ -137,6 +149,37 @@
     </div>
   </section>
 
+
+  <!-- ========== RUTGERS WELCOME BANNER ==========
+       Seasonal. To retire it after move-in, delete this whole
+       <section class="section section--tight"> block. -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="welcome reveal">
+        <div class="welcome__body">
+          <p class="eyebrow">New students &amp; returning Scarlet Knights</p>
+          <h2 class="h-lg">Welcome to New Brunswick. Start here.</h2>
+          <p>You&rsquo;ve got a lot to figure out this week. Where to eat two minutes from
+            College Ave isn&rsquo;t one of them. Show your RUID at the counter and these are
+            yours from day one.</p>
+          <ul class="welcome__deals">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><div><strong>Free dessert on orders over $30</strong><br>
+              <span>Tiramisu or Gulab Jamun &mdash; easy to hit with a group order.</span></div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><div><strong>20% off pizza, 2&ndash;5pm daily</strong><br>
+              <span>Happy Pizza Hour at Pizza Twist, Indian fusion range included.</span></div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><div><strong>5% off any order, all year</strong><br>
+              <span>Rutgers students, faculty and staff.</span></div></li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn btn--onDark" href="offers.html">See all offers</a>
+            <a class="btn btn--ghostDark" href="menu.html">View menu</a>
+          </div>
+        </div>
+        <div class="welcome__media" style="background-image:url('img/tall-shake.jpg')" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== ABOUT ========== -->
   <section class="section">
     <div class="wrap">
@@ -149,7 +192,7 @@
             sandwich before class, a deli hero at lunch, an Indian fusion pizza at dinner, and
             fusion tacos late at night &mdash; without your group having to agree on one cuisine.</p>
           <p>It&rsquo;s built for how people on a college campus actually eat: fast, varied and
-            at every hour of the day. Fresh ingredients, generous portions, halal and vegetarian
+            at every hour of the day. Fresh ingredients, generous portions, and vegetarian
             choices across every concept.</p>
           <div class="btn-row" style="margin-top:1.75rem">
             <a class="btn btn--outline" href="about.html">Our story <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
@@ -245,7 +288,7 @@
       </div>
       <div class="features">
         <div class="feature reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 13.8 9 19.5 10.8 13.8 12.6 12 18.2 10.2 12.6 4.5 10.8 10.2 9z"/><path d="M18.5 3.5v3M17 5h3"/></svg><span>Fresh ingredients</span></div>
-        <div class="feature reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c0-9 6-15 16-16 0 10-6 16-16 16Z"/><path d="M9 15c2-3 4.5-5 8-6.5"/></svg><span>Halal options</span></div>
+        <div class="feature reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c0-9 6-15 16-16 0 10-6 16-16 16Z"/><path d="M9 15c2-3 4.5-5 8-6.5"/></svg><span>Halal menu at Pizza Twist</span></div>
         <div class="feature reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c0-9 6-15 16-16 0 10-6 16-16 16Z"/><path d="M9 15c2-3 4.5-5 8-6.5"/></svg><span>Vegetarian options</span></div>
         <div class="feature reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c0-9 6-15 16-16 0 10-6 16-16 16Z"/><path d="M9 15c2-3 4.5-5 8-6.5"/></svg><span>Vegan options</span></div>
         <div class="feature reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5c3.5 4 6 6.5 6 10a6 6 0 0 1-12 0c0-2 .8-3.4 2-4.8.4 1.4 1.3 2.3 2.4 2.3 1.6 0 2.2-1.6 1.6-7.5Z"/></svg><span>Indian fusion specialties</span></div>
@@ -267,7 +310,7 @@
       <p>Browse the full menu, order for delivery or pickup, or tell us about your next event.</p>
       <div class="btn-row">
         <a class="btn btn--lg btn--onDark" href="menu.html">View Menu</a>
-        <a class="btn btn--lg btn--ghostDark" href="order.html">Order Online</a>
+        <a class="btn btn--lg btn--ghostDark" href="order.html">Order</a>
         <a class="btn btn--lg btn--ghostDark" href="catering.html">Catering Inquiry</a>
       </div>
     </div>
@@ -311,8 +354,9 @@
         </ul>
         <h4 style="margin-top:1.5rem">Explore</h4>
         <ul>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="order.html">Order Online</a></li>
+          <li><a href="menu.html">Menu</a>
+        <a href="offers.html">Offers</a></li>
+          <li><a href="order.html">Order</a></li>
           <li><a href="catering.html">Catering</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -331,7 +375,7 @@
 
     <div class="colophon">
       <span>&copy; <span id="year">2026</span> Scarlet Deli &amp; Pizza &middot; New Brunswick, New Jersey</span>
-      <span>Restaurants near Rutgers University &middot; Halal &amp; vegetarian options</span>
+      <span>Restaurants near Rutgers University &middot; Halal menu at Pizza Twist</span>
     </div>
   </div>
 </footer>

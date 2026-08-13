@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Offers &amp; Deals | Scarlet Deli &amp; Pizza near Rutgers, New Brunswick NJ</title>
+<meta name="description" content="Rutgers student and staff deals at Scarlet Deli &amp; Pizza, New Brunswick NJ. Free dessert on orders over $30, 20% off pizza during Happy Pizza Hour 2-5pm, and 5% off with a Rutgers ID.">
+<link rel="canonical" href="https://scarletdelipizza.com/offers.html">
+<meta property="og:title" content="Student Offers | Scarlet Deli &amp; Pizza, New Brunswick NJ">
+<meta property="og:description" content="Free dessert over $30, 20% off pizza 2-5pm, 5% off with a Rutgers ID.">
+<meta property="og:type" content="restaurant">
+<meta property="og:url" content="https://scarletdelipizza.com/offers.html">
+<meta name="theme-color" content="#CC0033">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.className += " js";</script>
+
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="announce" id="announce" hidden>
+  <div class="wrap">
+    <p><strong>Welcome, new Rutgers students!</strong> Free dessert on orders over $30, 20% off pizza 2&ndash;5pm,
+      and 5% off with a Rutgers ID. <a href="offers.html">See the offers</a></p>
+    <button class="announce__close" id="announceClose" aria-label="Dismiss announcement">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+</div>
+
+<div class="utility">
+  <div class="wrap">
+    <span class="status" id="status" data-open="unknown">
+      <span class="dot" aria-hidden="true"></span>
+      <span id="statusText">Open daily &mdash; see hours below</span>
+    </span>
+    <span>51 Paul Robeson Blvd, New Brunswick &mdash; on the Rutgers campus</span>
+    <a href="tel:+17322148800">(732) 214-8800</a>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">S</span>
+      <span class="brand__name">Scarlet Deli &amp; Pizza
+        <span class="brand__sub">New Brunswick, NJ</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="offers.html" aria-current="page">Offers</a>
+        <a href="order.html">Order</a>
+        <a href="catering.html">Catering</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <a class="btn header-cta" href="order.html">Order</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+        <a href="offers.html" aria-current="page">Offers</a>
+    <a href="order.html">Order</a>
+    <a href="catering.html">Catering</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a class="btn btn--block" href="order.html">Order</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero hero--page">
+    <div class="hero__media" style="background-image:url('img/community.jpg')" aria-hidden="true"></div>
+    <div class="hero__scrim" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="hero__inner">
+        <p class="eyebrow eyebrow--light">Offers</p>
+        <h1 class="h-xl">Welcome, Rutgers. Here&rsquo;s what&rsquo;s on.</h1>
+        <p class="lede lede--light">Three deals running right now for Rutgers students and staff.
+          Show your ID at the counter &mdash; no app, no code, no signup.</p>
+        <div class="btn-row">
+          <a class="btn btn--lg btn--onDark" href="menu.html">View Menu</a>
+          <a class="btn btn--lg btn--ghostDark" href="order.html">Order Online</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       OFFERS
+       To retire one, delete its whole <article class="offer"> block
+       and the matching row in the small print below.
+       ============================================================ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head is-centred reveal">
+        <p class="eyebrow">Rutgers students &amp; staff</p>
+        <h2 class="h-lg">Three ways to eat for less</h2>
+        <p class="lede">Show a valid Rutgers ID when you order. One offer per order.</p>
+      </div>
+
+      <div class="grid grid--3">
+
+        <article class="offer offer--amber reveal">
+          <div class="offer__band">
+            <span class="offer__kind">Orders over $30</span>
+            <p class="offer__deal">Free dessert</p>
+          </div>
+          <div class="offer__body">
+            <p class="offer__what">Tiramisu or Gulab Jamun, on us.</p>
+            <p>Spend $30 or more and pick a dessert free. Works just as well for a group
+              order &mdash; grab a few friends and you&rsquo;re there without trying.</p>
+            <a class="btn btn--outline" href="menu.html">Browse the menu</a>
+          </div>
+        </article>
+
+        <article class="offer offer--scarlet reveal">
+          <div class="offer__band">
+            <span class="offer__kind">Every day, 2&ndash;5pm</span>
+            <p class="offer__deal">20% off pizza</p>
+          </div>
+          <div class="offer__body">
+            <p class="offer__what">Happy Pizza Hour at Pizza Twist.</p>
+            <p>Every pizza on the Pizza Twist menu, 20% off between 2 and 5pm &mdash; the Indian
+              fusion range included. The gap between lunch and dinner just got cheaper.</p>
+            <a class="btn btn--outline" href="menu.html#pizza-twist">See Pizza Twist</a>
+          </div>
+        </article>
+
+        <article class="offer offer--ink reveal">
+          <div class="offer__band">
+            <span class="offer__kind">Any time, all year</span>
+            <p class="offer__deal">5% off</p>
+          </div>
+          <div class="offer__body">
+            <p class="offer__what">For Rutgers students and staff.</p>
+            <p>Show a valid Rutgers ID at the counter and take 5% off your order. Students,
+              faculty and staff &mdash; anyone with a RUID.</p>
+            <a class="btn btn--outline" href="contact.html">Find us</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--canvas">
+    <div class="wrap wrap--narrow">
+      <div class="section-head reveal">
+        <p class="eyebrow">The small print</p>
+        <h2 class="h-lg">How these work</h2>
+      </div>
+
+      <div class="terms reveal">
+        <dl>
+          <dt>Rutgers ID required</dt>
+          <dd>All three offers are for Rutgers students, faculty and staff. Show a valid
+            RUID card at the counter when you order.</dd>
+
+          <dt>One offer per order</dt>
+          <dd>Offers can&rsquo;t be combined with each other or with any other promotion.
+            Use whichever saves you the most.</dd>
+
+          <dt>In store and by phone</dt>
+          <dd>Available when you order at the counter or call
+            <a href="tel:+17322148800">(732) 214-8800</a>. Delivery apps set their own
+            pricing, so these don&rsquo;t apply there &mdash; one more reason pickup is cheaper.</dd>
+
+          <dt>Free dessert</dt>
+          <dd>$30 minimum before tax. One dessert per order, choice of Tiramisu or
+            Gulab Jamun, subject to availability.</dd>
+
+          <dt>Happy Pizza Hour</dt>
+          <dd>2:00pm to 5:00pm daily, on Pizza Twist pizzas. Your order needs to be placed
+            inside that window.</dd>
+
+          <dt>These can change</dt>
+          <dd>Offers may be withdrawn or amended at any time. The board at the counter is
+            the final word.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-band">
+    <div class="wrap">
+      <h2 class="h-lg">Come and use them</h2>
+      <p>51 Paul Robeson Blvd, two minutes from College Ave. Open till 11pm most nights,
+        1am Friday and Saturday.</p>
+      <div class="btn-row">
+        <a class="btn btn--lg btn--onDark" href="menu.html">View Menu</a>
+        <a class="btn btn--lg btn--ghostDark" href="tel:+17322148800">Call (732) 214-8800</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">S</span>
+          <span class="brand__name">Scarlet Deli &amp; Pizza
+            <span class="brand__sub">New Brunswick, NJ</span>
+          </span>
+        </a>
+        <p>Multiple food concepts, one convenient Rutgers location. Scarlet Deli &amp; Pizza,
+          Pizza Twist and Taco Twist &mdash; all under one roof.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.63A22 22 0 0 0 14.3 3.5c-2.4 0-4 1.46-4 4.15V9.9H7.6V13h2.7v8z"/></svg></a>
+          <a href="https://maps.google.com/?q=51+Paul+Robeson+Blvd,+New+Brunswick,+NJ+08901" aria-label="Google Business Profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6L12 16.8 6.6 19.6l1.2-6L3.3 9.4l6.1-.8z"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Visit</h4>
+        <p><a href="https://maps.google.com/?q=51+Paul+Robeson+Blvd,+New+Brunswick,+NJ+08901">51 Paul Robeson Blvd<br>New Brunswick, NJ 08901</a></p>
+        <p><a href="tel:+17322148800">(732) 214-8800</a></p>
+        <p><a href="mailto:scarletpizza55@gmail.com">scarletpizza55@gmail.com</a></p>
+      </div>
+
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li>Sun&ndash;Wed &middot; 10am&ndash;11pm</li>
+          <li>Thursday &middot; 10am&ndash;12am</li>
+          <li>Fri&ndash;Sat &middot; 10am&ndash;1am</li>
+        </ul>
+        <h4 style="margin-top:1.5rem">Explore</h4>
+        <ul>
+          <li><a href="menu.html">Menu</a>
+        <a href="offers.html">Offers</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Find us</h4>
+        <div class="footer-map">
+          <iframe src="https://www.google.com/maps?q=51+Paul+Robeson+Blvd,+New+Brunswick,+NJ+08901&amp;output=embed"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                  title="Map to Scarlet Deli and Pizza"></iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="colophon">
+      <span>&copy; <span id="year">2026</span> Scarlet Deli &amp; Pizza &middot; New Brunswick, New Jersey</span>
+      <span>Restaurants near Rutgers University &middot; Halal menu at Pizza Twist</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
