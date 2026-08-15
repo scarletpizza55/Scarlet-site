@@ -781,6 +781,43 @@ p:last-child { margin-bottom: 0; }
   background: var(--sand-line); margin-inline: .35rem;
 }
 
+
+/* ============================================================
+   Operational notice banner
+   Driven by notice.txt. Sits above everything, including the
+   marketing announcement bar, which hides while this is showing.
+   ============================================================ */
+
+.notice {
+  background: var(--scarlet-dk);
+  color: #fff;
+  font-size: .96rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 120;
+  border-bottom: 3px solid rgba(0,0,0,.2);
+}
+.notice .wrap {
+  display: flex; align-items: flex-start; gap: .75rem;
+  padding-block: .85rem;
+}
+.notice p { margin: 0; line-height: 1.45; }
+.notice a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.notice__icon {
+  width: 1.35rem; height: 1.35rem; flex: none; margin-top: .1rem;
+}
+
+/* alert — closures and urgent problems */
+.notice--alert { background: #A30028; }
+
+/* notice — early close, limited menu, delays */
+.notice--notice { background: var(--amber-dk, #C97F17); color: #fff; }
+.notice--notice .notice__icon { color: #fff; }
+
+/* info — general announcements */
+.notice--info { background: var(--ink); }
+.notice--info .notice__icon { color: var(--amber); }
+
 /* ============================================================
    Reveal on scroll
    ============================================================ */

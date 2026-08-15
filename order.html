@@ -23,6 +23,13 @@
 
 <a class="skip" href="#main">Skip to content</a>
 
+<div class="notice" id="notice" hidden role="status" aria-live="polite">
+  <div class="wrap">
+    <svg class="notice__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+    <p id="noticeText"></p>
+  </div>
+</div>
+
 <div class="announce" id="announce" hidden>
   <div class="wrap">
     <p><strong>Welcome, new Rutgers students!</strong> Free dessert on orders over $30, 20% off pizza 2&ndash;5pm,
@@ -215,7 +222,7 @@
 
       <div>
         <h4>Hours</h4>
-        <ul>
+        <ul class="js-hours-list">
           <li>Sun&ndash;Wed &middot; 10am&ndash;11pm</li>
           <li>Thursday &middot; 10am&ndash;12am</li>
           <li>Fri&ndash;Sat &middot; 10am&ndash;1am</li>

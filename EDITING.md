@@ -284,6 +284,82 @@ Get this wrong and the "Open now" badge in the top bar lies to customers.
 
 ---
 
+## notice.txt — banner and opening hours
+
+One file controls two things across the whole site. Edit it on GitHub, commit,
+and the site updates within about a minute. **This works from your phone**,
+which is the point — a power cut at 6pm is not a laptop moment.
+
+### The banner
+
+```
+SHOW: Y
+STYLE: alert
+MESSAGE: Closed today due to a power outage. We expect to reopen tomorrow morning.
+```
+
+| Setting | Values |
+|---|---|
+| `SHOW` | `Y` shows it, `N` hides it |
+| `STYLE` | `alert` (red, closures) · `notice` (amber, early close or limited menu) · `info` (dark, announcements) |
+| `MESSAGE` | One or two sentences |
+
+When the banner is on, the red "Welcome Rutgers students" marketing bar hides
+itself. One banner at a time, and the urgent one wins.
+
+**There is no expiry.** Nothing resets it. A closure notice left on `Y` tells
+every visitor you're shut while you're serving. Set it back to `N` before you
+unlock the door.
+
+### Opening hours
+
+```
+SUN: 10:00 - 23:00
+MON: 10:00 - 23:00
+TUE: 10:00 - 23:00
+WED: 10:00 - 23:00
+THU: 10:00 - 00:00
+FRI: 10:00 - 01:00
+SAT: 10:00 - 01:00
+```
+
+Both formats work — `10:00 - 23:00` or `10am - 11pm`. For a day you're shut,
+write `TUE: CLOSED`.
+
+**Closing after midnight just works.** A closing time earlier than the opening
+time is read as the next day, so `FRI: 10:00 - 01:00` means 10am until 1am
+Saturday. No special syntax.
+
+Changing hours here updates the footer on every page, the homepage info bar, the
+contact page, and the live "Open now — until 11pm" badge. Consecutive days with
+matching hours group automatically, so `Sun–Wed 10am–11pm` appears without you
+formatting anything.
+
+**All seven days must be present and valid**, or the file's hours are ignored
+entirely and the built-in ones are used. That's deliberate — a half-applied
+hours table would be worse than the one it replaced. If your edit doesn't take
+effect, check every day line.
+
+### Two things this does NOT change
+
+**Google.** Search results and Maps read your Google Business Profile, not this
+file. For a permanent hours change, update that too — it's what most customers
+actually see.
+
+**The built-in fallback.** The hours written into the pages stay as they are, so
+if this file breaks the site still shows something sensible. For a permanent
+change, ask to have the page hours and schema markup updated as well.
+
+### If something goes wrong
+
+The failure mode is silence. Delete the file, break the formatting, or lose your
+connection, and: no banner appears, the built-in hours are used, and nothing else
+on the site is affected. Keep each setting on one line, keep the labels exactly
+as written, and lines starting with `#` are ignored so the notes in the file are
+safe to leave.
+
+---
+
 ## Forms — one key, two files
 
 Both the catering inquiry and the contact form run on Web3Forms. To activate:

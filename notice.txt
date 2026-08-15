@@ -1,0 +1,67 @@
+# ===============================================================
+# SITE SETTINGS
+# Edit this file on GitHub and the website updates within a minute.
+# Works from your phone.
+# ===============================================================
+
+
+# --- BANNER ----------------------------------------------------
+# SHOW    Y = banner appears on every page, N = hidden
+# STYLE   alert (red) | notice (amber) | info (dark)
+# MESSAGE one or two sentences
+
+SHOW: Y
+STYLE: alert
+MESSAGE: We are closed today due to a power outage. We are sorry for the inconvenience and hope to reopen tomorrow.
+
+
+# --- OPENING HOURS ---------------------------------------------
+# One line per day. Use 24-hour or am/pm, both work:
+#   MON: 10:00 - 23:00
+#   MON: 10am - 11pm
+# For a closing time after midnight, just write it. A closing time
+# earlier than the opening time is understood as the next day:
+#   FRI: 10:00 - 01:00     (10am until 1am Saturday)
+# For a day you are shut:
+#   TUE: CLOSED
+
+SUN: 10:00 - 23:00
+MON: 10:00 - 23:00
+TUE: 10:00 - 23:00
+WED: 10:00 - 23:00
+THU: 10:00 - 00:00
+FRI: 10:00 - 01:00
+SAT: 10:00 - 01:00
+
+
+# ===============================================================
+# NOTES
+#
+# - Keep each setting on ONE line.
+# - Keep the labels exactly as written.
+# - Lines starting with # are ignored, so these notes are safe.
+# - When the banner is on, the red "Welcome Rutgers students"
+#   marketing bar hides itself. One banner at a time.
+# - If this file is deleted or broken, the site falls back to the
+#   hours written into the pages and shows no banner. Nothing
+#   else breaks.
+#
+# IMPORTANT: changing hours here updates what visitors see, but
+# NOT what Google shows in search results and Maps. For a
+# permanent hours change, also update your Google Business
+# Profile, and ask for the built-in page hours to be updated.
+#
+# EXAMPLES for the banner
+#
+# SHOW: Y
+# STYLE: alert
+# MESSAGE: Closed today due to a power outage. We expect to reopen tomorrow morning.
+#
+# SHOW: Y
+# STYLE: notice
+# MESSAGE: Closing at 8pm tonight for a private event.
+#
+# SHOW: Y
+# STYLE: info
+# MESSAGE: Open all through Thanksgiving weekend, normal hours.
+# ===============================================================

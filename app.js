@@ -36,31 +36,107 @@
 
 
 /* ============================================================
-   2. Open / closed indicator
-   Edit HOURS to match the real schedule. 24-hour format;
-   a closing time after midnight uses a number above 24, so a
-   3am close is written as 27.
+   2. Opening hours + open/closed indicator
+
+   Hours come from notice.txt when it is readable, and fall back to
+   the values written into each page otherwise. That fallback matters:
+   if this script fails, visitors still see hours rather than a blank.
    ============================================================ */
 
+// Baseline, used until notice.txt is read and if it can't be read.
+// 24-hour numbers; a closing time after midnight is above 24, so 1am = 25.
 var HOURS = {
-  0: [10, 23],   // Sunday    10am – 11pm
-  1: [10, 23],   // Monday    10am – 11pm
-  2: [10, 23],   // Tuesday   10am – 11pm
-  3: [10, 23],   // Wednesday 10am – 11pm
-  4: [10, 24],   // Thursday  10am – 12am
-  5: [10, 25],   // Friday    10am – 1am  (25 = 1am)
-  6: [10, 25]    // Saturday  10am – 1am
+  0: [10, 23],   // Sunday
+  1: [10, 23],   // Monday
+  2: [10, 23],   // Tuesday
+  3: [10, 23],   // Wednesday
+  4: [10, 24],   // Thursday
+  5: [10, 25],   // Friday
+  6: [10, 25]    // Saturday
 };
+
+var DAY_KEYS  = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+var DAY_SHORT = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+var DAY_LONG  = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+/* Accepts "10:00", "10", "10am", "10:30 PM", "23:00". Returns decimal hours. */
+function parseTime(raw) {
+  if (!raw) return null;
+  var t = raw.trim().toLowerCase().replace(/\s+/g, '');
+  var pm = /pm$/.test(t), am = /am$/.test(t);
+  t = t.replace(/[ap]m$/, '');
+  var bits = t.split(':');
+  var h = parseInt(bits[0], 10);
+  var m = bits.length > 1 ? parseInt(bits[1], 10) : 0;
+  if (isNaN(h) || isNaN(m) || h < 0 || h > 24 || m < 0 || m > 59) return null;
+  if (pm && h < 12) h += 12;
+  if (am && h === 12) h = 0;
+  return h + m / 60;
+}
+
+/* "10am", "11pm", "12am", "10:30pm" */
+function fmtTime(v) {
+  var h = Math.floor(v % 24), m = Math.round((v % 1) * 60);
+  var suffix = (h >= 12 && h < 24) ? 'pm' : 'am';
+  var display = (h % 12 === 0) ? 12 : h % 12;
+  return display + (m ? ':' + (m < 10 ? '0' + m : m) : '') + suffix;
+}
+
+function dayLabel(d) {
+  var h = HOURS[d];
+  return h ? fmtTime(h[0]) + '\u2013' + fmtTime(h[1]) : 'Closed';
+}
+
+/* Collapses consecutive days with identical hours into ranges. */
+function groupDays() {
+  var out = [], i = 0;
+  while (i < 7) {
+    var label = dayLabel(i), j = i;
+    while (j + 1 < 7 && dayLabel(j + 1) === label) j++;
+    out.push({ from: i, to: j, hours: label });
+    i = j + 1;
+  }
+  return out;
+}
+
+function renderHours() {
+  var groups = groupDays();
+
+  var list = document.querySelector('.js-hours-list');
+  if (list) {
+    list.innerHTML = groups.map(function (g) {
+      var name = (g.from === g.to) ? DAY_LONG[g.from]
+               : DAY_SHORT[g.from] + '\u2013' + DAY_SHORT[g.to];
+      return '<li>' + name + ' \u00b7 ' + g.hours + '</li>';
+    }).join('');
+  }
+
+  var short = document.querySelector('.js-hours-short');
+  if (short) {
+    short.textContent = groups.map(function (g) {
+      var name = (g.from === g.to) ? DAY_SHORT[g.from]
+               : DAY_SHORT[g.from] + '\u2013' + DAY_SHORT[g.to];
+      return name + ' ' + g.hours;
+    }).join(' \u00b7 ');
+  }
+
+  var long = document.querySelector('.js-hours-long');
+  if (long) {
+    long.innerHTML = groups.map(function (g) {
+      var name = (g.from === g.to) ? DAY_LONG[g.from]
+               : DAY_LONG[g.from] + '\u2013' + DAY_LONG[g.to];
+      return name + ' \u00b7 ' + g.hours;
+    }).join('<br>');
+  }
+}
 
 function checkOpen() {
   var el = document.getElementById('status');
   var text = document.getElementById('statusText');
   if (!el || !text) return;
 
-  // Always evaluated in New Jersey time, not the visitor's timezone.
-  var nowNJ = new Date(
-    new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })
-  );
+  // Evaluated in New Jersey time, not the visitor's timezone.
+  var nowNJ = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' }));
   var day = nowNJ.getDay();
   var hour = nowNJ.getHours() + nowNJ.getMinutes() / 60;
 
@@ -71,32 +147,23 @@ function checkOpen() {
     open = true; closesAt = today[1];
   }
 
-  // A window that started yesterday may still be running past midnight.
+  // A window that began yesterday may still be running past midnight.
   var yday = HOURS[(day + 6) % 7];
   if (!open && yday && yday[1] > 24 && hour < yday[1] - 24) {
     open = true; closesAt = yday[1] - 24;
   }
 
   if (open) {
-    var h = Math.floor(closesAt % 24);
-    var suffix = (h >= 12 && h < 24) ? 'pm' : 'am';
-    var display = (h % 12 === 0) ? 12 : h % 12;
     el.setAttribute('data-open', 'yes');
-    text.textContent = 'Open now — until ' + display + suffix;
+    text.textContent = 'Open now \u2014 until ' + fmtTime(closesAt);
   } else {
     el.setAttribute('data-open', 'no');
     text.textContent = 'Currently closed';
   }
 }
+
 checkOpen();
 setInterval(checkOpen, 60000);
-
-
-/* ---------- Footer year ---------- */
-(function () {
-  var y = document.getElementById('year');
-  if (y) y.textContent = new Date().getFullYear();
-})();
 
 
 /* ---------- 3. Menu category scrollspy ---------- */
@@ -272,4 +339,86 @@ setInterval(checkOpen, 60000);
       } catch (e) {}
     });
   }
+})();
+
+
+/* ============================================================
+   7. Site settings from notice.txt
+   One fetch drives both the banner and the opening hours. Edit
+   that file on GitHub and the site updates within a minute.
+
+   Fails silent: if the file is missing, unreachable or malformed,
+   no banner shows and the hours written into the page are kept.
+   ============================================================ */
+
+(function () {
+  var bar = document.getElementById('notice');
+  var text = document.getElementById('noticeText');
+
+  // Cloudflare caches static files hard. A closure notice that appears
+  // two hours late is worse than useless, so read it fresh every time.
+  fetch('/notice.txt?v=' + Date.now(), { cache: 'no-store' })
+    .then(function (res) {
+      if (!res.ok) throw new Error('notice.txt not reachable');
+      return res.text();
+    })
+    .then(function (raw) {
+      var cfg = {};
+      raw.split(/\r?\n/).forEach(function (line) {
+        line = line.trim();
+        if (!line || line.charAt(0) === '#') return;     // skip blanks and comments
+        var i = line.indexOf(':');
+        if (i === -1) return;
+        var key = line.slice(0, i).trim().toUpperCase();
+        var val = line.slice(i + 1).trim();              // colons inside a message are fine
+        if (!(key in cfg)) cfg[key] = val;               // first occurrence wins
+      });
+
+      // ---------- hours ----------
+      // Applied only if EVERY day parses. A half-updated table would be
+      // worse than the baseline it replaced.
+      var parsed = {}, complete = true;
+      for (var d = 0; d < 7; d++) {
+        var v = cfg[DAY_KEYS[d]];
+        if (!v) { complete = false; break; }
+        if (/^closed$/i.test(v.trim())) { parsed[d] = null; continue; }
+
+        var parts = v.split(/\s*(?:-|\u2013|\u2014|to)\s*/i);
+        if (parts.length < 2) { complete = false; break; }
+        var o = parseTime(parts[0]), c = parseTime(parts[1]);
+        if (o === null || c === null) { complete = false; break; }
+        if (c <= o) c += 24;                              // closes after midnight
+        parsed[d] = [o, c];
+      }
+
+      if (complete) {
+        for (var k = 0; k < 7; k++) {
+          HOURS[k] = parsed[k] || [0, 0];                 // [0,0] never matches, so: closed
+        }
+        renderHours();
+        checkOpen();
+      } else {
+        console.warn('Hours in notice.txt incomplete or malformed \u2014 keeping the built-in hours.');
+      }
+
+      // ---------- banner ----------
+      if (!bar || !text) return;
+      var show = (cfg.SHOW || '').toUpperCase();
+      var on = (show === 'Y' || show === 'YES' || show === 'TRUE' || show === '1');
+      if (!on || !cfg.MESSAGE) return;
+
+      var style = (cfg.STYLE || 'alert').toLowerCase();
+      if (['alert', 'notice', 'info'].indexOf(style) === -1) style = 'alert';
+
+      text.textContent = cfg.MESSAGE;
+      bar.className = 'notice notice--' + style;
+      bar.hidden = false;
+
+      // One banner at a time. An operational notice outranks marketing.
+      var promo = document.getElementById('announce');
+      if (promo) promo.hidden = true;
+    })
+    .catch(function (err) {
+      console.warn('notice.txt not applied:', err.message);
+    });
 })();
