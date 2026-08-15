@@ -10,7 +10,7 @@
 # STYLE   alert (red) | notice (amber) | info (dark)
 # MESSAGE one or two sentences
 
-SHOW: Y
+SHOW: N
 STYLE: alert
 MESSAGE: We are closed today due to a power outage. We are sorry for the inconvenience and hope to reopen tomorrow.
 
